@@ -10,13 +10,13 @@ phases:
 
   build:
     commands:
-      - echo Building Next.js app...
+      - echo Building Vite app...
       - npm run build
-      - npm run export
 
 artifacts:
-  base-directory: out
+  base-directory: dist
   files:
     - '**/*'
+
 
 
