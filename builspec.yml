@@ -13,10 +13,16 @@ phases:
       - echo Building Vite app...
       - npm run build
 
+  post_build:
+    commands:
+      - echo Deploying to S3...
+      - aws s3 sync dist/ s3://your-bucket-name/ --delete
+
 artifacts:
   base-directory: dist
   files:
     - '**/*'
+
 
 
 
